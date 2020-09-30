@@ -4,8 +4,8 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    Electrodoc w;
-    w.show();
-    return a.exec();
+    QApplication app(argc, argv);
+    Electrodoc electrodocScreen;
+    electrodocScreen.show();
+    return app.exec();
 }
