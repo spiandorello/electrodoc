@@ -83,37 +83,43 @@ void OhmsLaw::on_calc_clicked()
     QString current = ui->currentInput->text();
     QString resistence = ui->resInput->text();
 
-    if (voltage.isEmpty() && resistence.isEmpty() && current.isEmpty() && power.isEmpty()) {
+
+    if ((resState != resistence.toDouble() && currentState != current.toDouble())) {
+        ui->voltageInput->setText(QString::number(calcVoltage(resistence, current, power)));
+
+        resState = resistence.toDouble();
+        powerState = power.toDouble();
+        voltageState = voltage.toDouble();
+        currentState = current.toDouble();
         return;
     }
 
-    if (voltage.isEmpty() || currentState != current.toDouble() || resState != resistence.toDouble() || powerState != power.toDouble()) {
-        if ((!resistence.isEmpty() && !current.isEmpty()) || (!power.isEmpty() && !current.isEmpty()) || (!power.isEmpty() && !resistence.isEmpty())) {
-            ui->voltageInput->setText(QString::number(calcVoltage(resistence, current, power)));
-        }
+
+    if ((voltageState != voltage.toDouble() && resState != resistence.toDouble())) {
+        ui->currentInput->setText(QString::number(calcCurrent(voltage, resistence, power)));
+
+        resState = resistence.toDouble();
+        powerState = power.toDouble();
+        voltageState = voltage.toDouble();
+        currentState = current.toDouble();
+        return;
     }
 
-    if (current.isEmpty() || voltageState != voltage.toDouble() || resState != resistence.toDouble() || powerState != power.toDouble()) {
-        if ((!voltage.isEmpty() && !resistence.isEmpty()) || (!power.isEmpty() && !resistence.isEmpty()) || (!power.isEmpty() && !voltage.isEmpty())) {
-            ui->currentInput->setText(QString::number(calcCurrent(voltage, resistence, power)));
-        }
-    }
 
+    if ((voltageState != voltage.toDouble() && currentState != current.toDouble())) {
+        ui->resInput->setText(QString::number(calcResistence(voltage, current, power)));
 
-    if (resistence.isEmpty() || voltageState != voltage.toDouble() || currentState != current.toDouble() || powerState != power.toDouble()) {
-        if ((!voltage.isEmpty() && !current.isEmpty()) || (!power.isEmpty() && !current.isEmpty()) || (!power.isEmpty() && !voltage.isEmpty())) {
-            ui->resInput->setText(QString::number(calcResistence(voltage, current, power)));
-        }
+        resState = resistence.toDouble();
+        powerState = power.toDouble();
+        voltageState = voltage.toDouble();
+        currentState = current.toDouble();
+        return;
     }
 
 //    if (power.isEmpty()) {
 //        ui->powerInput->setText(QString::number(calcPower(voltage, resistence, current)));
 //    }
 
-    resState = resistence.toDouble();
-    powerState = power.toDouble();
-    voltageState = voltage.toDouble();
-    currentState = current.toDouble();
 }
 
 
