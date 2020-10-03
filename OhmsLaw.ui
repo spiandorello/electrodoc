@@ -16,68 +16,127 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QPushButton" name="calc">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>30</y>
-     <width>421</width>
-     <height>295</height>
+     <x>520</x>
+     <y>460</y>
+     <width>112</width>
+     <height>32</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="2" column="0">
-     <widget class="QPushButton" name="calc">
-      <property name="text">
-       <string>Calc</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="2" column="1">
-       <widget class="QLineEdit" name="currentInput"/>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>V</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="voltageInput"/>
-      </item>
-      <item row="1" column="1">
-       <widget class="QLineEdit" name="resInput"/>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string>I</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>R</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Ohms Laws</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>270</y>
+     <width>58</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>V</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="currentInput">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>140</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>260</y>
+     <width>58</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>R</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="resInput">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>290</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="image">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>200</y>
+     <width>271</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/image.png) 0 0 0 0 stretch stretch;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="voltageInput">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>290</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>540</y>
+     <width>58</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Power</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="powerInput">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>570</y>
+     <width>113</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>110</y>
+     <width>58</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>I</string>
+   </property>
   </widget>
  </widget>
  <resources/>
