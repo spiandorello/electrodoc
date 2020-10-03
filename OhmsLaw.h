@@ -26,6 +26,10 @@ private slots:
 
 private:
     Ui::OhmsLaw *ui;
+    double resState;
+    double powerState;
+    double voltageState;
+    double currentState;
 };
 
 #endif // OHMSLAW_H
