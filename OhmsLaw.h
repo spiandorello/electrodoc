@@ -15,6 +15,9 @@ public:
     explicit OhmsLaw(QWidget *parent = nullptr);
     ~OhmsLaw();
 
+private slots:
+    void on_calc_clicked();
+
 private:
     Ui::OhmsLaw *ui;
 };

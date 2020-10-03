@@ -15,7 +15,6 @@ Electrodoc::~Electrodoc()
     delete ui;
 }
 
-
 void Electrodoc::on_ohmsLawMenuBtn_clicked()
 {
     ui->mainStack->setCurrentIndex(1);
